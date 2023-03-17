@@ -1,29 +1,23 @@
 <?php
-// Define the path to your CSV file
+//File Path
 $file_path = 'cfplay.csv';
 
-// Open the file for reading
 $file = fopen($file_path, 'r');
 
-// Initialize an array to store the search results
 $search_results = [];
 
-// Loop through each row in the CSV file
 while (($row = fgetcsv($file)) !== false) {
     
-    // Check if the current row matches the search criteria
     if (stripos($row[1], $_GET['search']) !== false) {
         
-        // If it does, add it to the search results array
         $search_results[] = $row;
         
     }
 }
 
-// Close the CSV file
 fclose($file);
 
-// Generate the HTML table
+//HTML
 $table_html = '
 <head>
     <meta charset="UTF-8">
@@ -88,10 +82,10 @@ main{
 <div class="table table-responsive-lg ">
     <table class="table table-striped table-bordered">';
 
-// Add the table headers
+// Headers
 $table_html .= '<thead class="table-dark"><tr><th>ID</th><th>SURNAME</th><th>FIRSTNAME</th><th>BDATE</th><th>SEX</th><th>TITLE</th><th>RATING</th><th>FED</th></tr></thead>';
 
-// Add the table rows
+// Rows
 $table_html .= '<tbody class="table-group-divider">';
 foreach ($search_results as $result) {
     $table_html .= '<tr><td>' . $result[0] . '</td><td>' . $result[1] . '</td><td>' . $result[2] . '</td><td>' . $result[3] . '</td><td>' . $result[4] . '</td><td>' . $result[5] . '</td><td>' . $result[6] . '</td><td>' . $result[7] . '</td></td>' . $result[8] . '</td></tr>' ;
@@ -104,7 +98,6 @@ Developed by <a href="mailto:ethanhiggie10@gmail.com">ethanhiggie10@gmail.com</a
 </footer>
 ';
 
-// Output the HTML table
 echo $table_html;
 
 ?>
