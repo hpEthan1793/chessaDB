@@ -20,7 +20,7 @@
   <main>
     <div class="text-center">
       <h1>Chessa Database Search</h1>
-      <p>Last updated: <a href="https://chessa.co.za/ratingsdatabase/ratingsdatabase.aspx"> 1 March 2023</a>
+      <p>Last updated: <a href="https://chessa.co.za/ratingsdatabase/ratingsdb.aspx"> 1 March 2024</a>
       </p>
     </div>
     
@@ -45,7 +45,7 @@
     <div class="d-lg-flex justify-content-center">
       <form action="searchFED.php" method="get">
         <div class="d-flex">
-          <input type="text" name="search" placeholder="Federation Search" class="form-control form-control-lg m-2">
+          <input type="text" name="search" placeholder="Region Search" class="form-control form-control-lg m-2">
           <div class="text-center">
             <input type="submit" class="btn btn-dark m-2" value="Search">
           </div>
@@ -53,7 +53,7 @@
       </form>
     <form action="searchTIT.php" method="get">
         <div class="d-flex">
-          <input type="text" name="search" placeholder="Title Search" class="form-control form-control-lg m-2">
+          <input type="text" name="search" placeholder="Title Search (GM, IM, WIM...)" class="form-control form-control-lg m-2">
           <div class="text-center">
             <input type="submit" class="btn btn-dark m-2" value="Search">
           </div>
@@ -62,6 +62,4 @@
     </div>
     </div>
   </main>
-  <footer class="text-center"> Developed by <a href="mailto:ethanhiggie10@gmail.com">ethanhiggie10@gmail.com</a>
-  </footer>
 </html>
