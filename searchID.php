@@ -97,9 +97,6 @@ foreach ($search_results as $result) {
 $table_html .= '</tbody>';
 
 $table_html .= '</table></div></main>
-<footer class="text-center">
-Developed by <a href="mailto:ethanhiggie10@gmail.com">ethanhiggie10@gmail.com</a>
-</footer>
 ';
 
 // Output the HTML table
